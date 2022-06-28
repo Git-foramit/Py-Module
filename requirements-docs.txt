@@ -1,5 +1,0 @@
-mkdocs-material
-mkdocstrings
-mkdocs-git-revision-date-localized-plugin
-mike
-mkapi
