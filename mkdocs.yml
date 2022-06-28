@@ -29,37 +29,6 @@ nav:
 
 use_directory_urls: false
 
-plugins:
-  - search
-  - mkdocstrings:
-        handlers:
-            python:
-                setup_commands:
-                    - import sys
-                    - sys.path.append("docs")
-                selection:
-                    new_path_syntax: yes
-
-  - git-revision-date-localized:
-        fallback_to_build_date: true
-  - mkapi
-
-markdown_extensions:
-  - admonition
-  - pymdownx.highlight
-  - pymdownx.superfences
-  - pymdownx.emoji
-  - codehilite
-  - smarty
-  - toc:
-      permalink: true
-
-extra_css:
-    - 'css/termynal.css'
-
-extra_javascript:
-    - 'js/termynal.js'
-    - 'js/custom.js'
 
 extra:
   version:
