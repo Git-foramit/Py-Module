@@ -1,13 +1,66 @@
 site_name: Documentation
 theme:
-  name: material
-  features:
-    - search.suggest
-    - search.highlight
-    - content.tabs.link
+  name: "material"
+  # Disable fonts because of GDPR (https://squidfunk.github.io/mkdocs-material/setup/changing-the-fonts/#disabling-font-loading)
+  font: false
+  palette:
+    - scheme: default
+      primary: cyan
+      accent: amber
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+    - scheme: slate
+      primary: cyan
+      accent: amber
+
+repo_url: https://github.com/Git-foramit/Py-Module.github.io
+repo_name: Py-Module.github.io
+site_author: Git-foramit
+edit_uri: edit/master/docs/
+
+docs_dir: docs
+site_dir: site
+
+nav:
+  - Introduction: index.md
+  - About: about.md
+  - FAQ: faq.md
+
+use_directory_urls: false
+
 plugins:
   - search
-nav:
-  - Introduction: "docs/index.md"
-  - About: "docs/about.md"
-  - FAQ: "docs/faq.md"
+  - mkdocstrings:
+        handlers:
+            python:
+                setup_commands:
+                    - import sys
+                    - sys.path.append("docs")
+                selection:
+                    new_path_syntax: yes
+
+  - git-revision-date-localized:
+        fallback_to_build_date: true
+  - mkapi
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.emoji
+  - codehilite
+  - smarty
+  - toc:
+      permalink: true
+
+extra_css:
+    - 'css/termynal.css'
+
+extra_javascript:
+    - 'js/termynal.js'
+    - 'js/custom.js'
+
+extra:
+  version:
+    provider: mike
