@@ -1,0 +1,13 @@
+site_name: Documentation
+theme:
+  name: material
+  features:
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+plugins:
+  - search
+nav:
+  - Introduction: "docs/index.md"
+  - About: "docs/about.md"
+  - FAQ: "docs/faq.md"
