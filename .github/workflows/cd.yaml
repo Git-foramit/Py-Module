@@ -40,5 +40,4 @@ jobs:
         uses: pypa/gh-action-pypi-publish@master
         with:
           password: ${{ secrets.JFROG_API_TOKEN }}
-          repository_url: https://artifactory.boschdevcloud.com/ui/repos/tree/General/gs-pj-top98-ai-know-pypi-aibse-local
-
+          repository_url: https://artifactory:boschdevcloud:com/artifactory/gs-pj-top98-ai-know-pypi-aibse-local/
