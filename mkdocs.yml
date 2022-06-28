@@ -1,0 +1,35 @@
+site_name: Documentation
+theme:
+  name: "material"
+  # Disable fonts because of GDPR (https://squidfunk.github.io/mkdocs-material/setup/changing-the-fonts/#disabling-font-loading)
+  font: false
+  palette:
+    - scheme: default
+      primary: cyan
+      accent: amber
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+    - scheme: slate
+      primary: cyan
+      accent: amber
+
+repo_url: https://github.com/Git-foramit/Py-Module.github.io
+repo_name: Py-Module.github.io
+site_author: Git-foramit
+edit_uri: edit/master/docs/
+
+docs_dir: docs
+site_dir: site
+
+nav:
+  - Introduction: index.md
+  - About: about.md
+  - FAQ: faq.md
+
+use_directory_urls: false
+
+
+extra:
+  version:
+    provider: mike
